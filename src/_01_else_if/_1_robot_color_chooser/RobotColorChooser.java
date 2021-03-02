@@ -14,12 +14,16 @@ public class RobotColorChooser {
 		Robot bot = new Robot();
 		bot.setSpeed(100);
 		bot.penDown();
+		int deg = 89;
+		int move = 100;
 		
 		for (;;) {
-	    //2. Make the robot draw a shape (this will take more than one line of code)	
+			deg += 1;
+			move += 1;
+	    //2. Make the robot draw a shape (this will take more than one line of code)
 		for (count = 0; count < 4; count++) {
-			bot.move(200);
-			bot.turn(90);
+			bot.move(move);
+			bot.turn(deg);
 		}
 		//3. Set the pen width to 10
 		bot.setPenWidth(10);
