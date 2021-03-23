@@ -13,16 +13,22 @@ public class BirthdayReminder {
 		String myBirthday = "April 16th";
 
 		// 2. Find out which birthday the user wants and and store their response in a variable
-	
-		// 3. Print out what the user typed
-		
+		int b = JOptionPane.showOptionDialog(null, "What birthday do u want?", "Pop-up Title", 0,
+				JOptionPane.INFORMATION_MESSAGE, null, new String[] { "Mom", "Dad", "Yours" }, null);
+
 		// 4. if user asked for "mom"
+		if (b == 0) {
 			//print mom's birthday
+			JOptionPane.showMessageDialog(null, "Mom's Birthday is " + momsBirthday);
+		} else if (b == 1) {
 		// 5. if user asked for "dad"
 			// print dad's birthday
+			JOptionPane.showMessageDialog(null, "Dad's Birthday is " + dadsBirthday);
+		} else if (b == 2) {
 		// 6. if user asked for your name
 			// print myBirthday
-		//7. otherwise print "Sorry, i don't remember that person's birthday!"
+			JOptionPane.showMessageDialog(null, "Your Birthday is " + myBirthday);
+		}
 
 	} 
 }
